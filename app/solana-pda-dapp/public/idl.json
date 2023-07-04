@@ -1,0 +1,199 @@
+{
+  "version": "0.1.0",
+  "name": "demo_pda",
+  "instructions": [
+    {
+      "name": "createUser",
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wallet",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "user",
+          "type": {
+            "defined": "UserAccount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "createContract",
+      "accounts": [
+        {
+          "name": "contract",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wallet",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "contract",
+          "type": {
+            "defined": "ContractAccount"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "phone",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "birthDay",
+            "type": "string"
+          },
+          {
+            "name": "address1",
+            "type": "string"
+          },
+          {
+            "name": "address2",
+            "type": "string"
+          },
+          {
+            "name": "address3",
+            "type": "string"
+          },
+          {
+            "name": "subPhone",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sellerPhone",
+            "type": "string"
+          },
+          {
+            "name": "buyerPhone",
+            "type": "string"
+          },
+          {
+            "name": "returnDate",
+            "type": "string"
+          },
+          {
+            "name": "item",
+            "type": "string"
+          },
+          {
+            "name": "kind",
+            "type": "string"
+          },
+          {
+            "name": "formalDay",
+            "type": "string"
+          },
+          {
+            "name": "areaFlatUnit",
+            "type": "string"
+          },
+          {
+            "name": "address1",
+            "type": "string"
+          },
+          {
+            "name": "address2",
+            "type": "string"
+          },
+          {
+            "name": "address3",
+            "type": "string"
+          },
+          {
+            "name": "option",
+            "type": "i32"
+          },
+          {
+            "name": "flatPrice",
+            "type": "i32"
+          },
+          {
+            "name": "contractPrice",
+            "type": "i32"
+          },
+          {
+            "name": "firstYn",
+            "type": "bool"
+          },
+          {
+            "name": "firstPrice",
+            "type": "i32"
+          },
+          {
+            "name": "firstEndCount",
+            "type": "i32"
+          },
+          {
+            "name": "secondYn",
+            "type": "bool"
+          },
+          {
+            "name": "secondPrice",
+            "type": "i32"
+          },
+          {
+            "name": "secondEndCount",
+            "type": "i32"
+          },
+          {
+            "name": "thirdYn",
+            "type": "bool"
+          },
+          {
+            "name": "thirdPrice",
+            "type": "i32"
+          },
+          {
+            "name": "thirdEndCount",
+            "type": "i32"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "8PBfGurkJBKpSkBvsWbuTnoba7kdzQDQj4D8zhzs1rNx"
+  }
+}
